@@ -10,7 +10,14 @@ def introduction():
     print("1. Enter the mansion through the front door.")
     print("2. Look for another way inside.")
     print("3. Turn back and leave.")
-
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        enter_front_door()
+    elif choice == "2":
+        print("You decide to look for another way inside.")
+        # Add function call for another way inside
+    elif choice == "3":
+        print("You decide to turn back and leave. The mystery of the mansion remains unsolved.")
 def enter_front_door():
     print("You gather your courage and push open the creaky front door, stepping into the mansion's foyer.")
     print("The air feels heavy, and the silence is deafening.")
@@ -19,7 +26,14 @@ def enter_front_door():
     print("1. Explore the ground floor.")
     print("2. Head upstairs to the upper floors.")
     print("3. Check the basement for clues.")
-
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        explore_ground_floor()
+    elif choice == "2":
+        print("You decide to head upstairs to explore the upper floors.")
+        # Add function call for exploring upper floors
+    elif choice == "3":
+        print("You decide to check the basement for clues.")
 def explore_ground_floor():
     print("You begin to explore the ground floor of the mansion.")
     print("Each room is filled with dusty furniture and cobwebs.")
@@ -29,7 +43,14 @@ def explore_ground_floor():
     print("1. Investigate the source of the footsteps.")
     print("2. Hide and observe from a safe distance.")
     print("3. Retreat back to the foyer.")
-
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        investigate_source_of_footsteps()
+    elif choice == "2":
+        retreat_quietly()
+    elif choice == "3":
+        print("You decide to retreat back to the foyer.")
+        enter_front_door()
 def investigate_source_of_footsteps():
     print("You cautiously approach the room where you heard the footsteps.")
     print("Peering inside, you see a shadowy figure lurking in the darkness.")
@@ -37,36 +58,30 @@ def investigate_source_of_footsteps():
     time.sleep(2)
     print("1. Confront the figure and demand answers.")
     print("2. Retreat quietly and avoid being noticed.")
-    print("3. Call out to the figure and try to communicate.")
-
-def hide_and_observe():
-    print("You quickly find a hiding spot behind a nearby piece of furniture.")
-    print("From your hiding place, you watch as a ghostly apparition materializes in the room.")
-    print("It seems to be searching for something.")
-    print("What will you do?")
+    print("3. Call out to ask the figure who they are.")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        confront_the_figure()
+    elif choice == "2":
+        retreat_quietly()
+    elif choice == "3":
+        ask_the_figure_who_they_are()
+def confront_the_figure():
+    print("You summon your courage and step forward, confronting the shadowy figure.")
+    print("As you draw closer, the figure's form shifts and twists,")
+    print("revealing itself to be a malevolent spirit, its eyes gleaming with malice.")
     time.sleep(2)
-    print("1. Stay hidden and observe its movements.")
-    print("2. Attempt to communicate with the apparition.")
-    print("3. Make a run for it and leave the mansion.")
+    print("You bravely confront the shadowy figure, but as you draw near, it lunges at you with supernatural speed, enveloping you in darkness.")
+    print("Your vision fades as chilling whispers surround you, marking the end of your journey in the haunted mansion.")
+    #This is a death
 
-def stay_hidden_and_observe():
-    print("You remain hidden, observing the ghostly apparition's movements.")
-    print("It seems to be searching for something frantically, its form flickering in and out of existence.")
-    print("What will you do?")
+def retreat_quietly():
+    print("As you choose to retreat quietly you notice the door behind you has closed and locked")
+    print("This causes you to be very nervous and frightened")
     time.sleep(2)
-    print("1. Wait for the apparition to leave and then continue exploring.")
-    print("2. Attempt to communicate with the apparition.")
-    print("3. Leave the mansion and never look back.")
-
-def attempt_to_communicate():
-    print("You gather your courage and attempt to communicate with the shadowy figure.")
-    print("To your surprise, the figure responds, its voice echoing through the room.")
-    print("What will you do?")
-    time.sleep(2)
-    print("1. Ask the figure who they are and what they want.")
-    print("2. Offer to help the figure find peace and move on.")
-    print("3. Retreat from the room and regroup.")
-
+    print("1. Whimper out for help")
+    print("2. Continue to look around for clues")
+#This will result in a win
 def ask_the_figure_who_they_are():
     print("Summoning all your courage, you call out to the shadowy figure,")
     print("demanding to know who they are and what they seek.")
@@ -76,107 +91,77 @@ def ask_the_figure_who_they_are():
     print("What will you do next?")
     print("1. Ask for a trade for more information.")
     print("2. Retreat cautiously and try to find another way out.")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        ask_for_a_trade()
+    elif choice == "2":
+        retreat_cautiously()
+
+#This will lead to a win
+
+def retreat_cautiously():
+    print("Feeling overwhelmed by the eerie atmosphere and the unknown dangers lurking in the mansion,")
+    print("you decide to retreat cautiously, step by step, back towards the foyer.")
+    print("Every creak of the floorboards sends shivers down your spine as you navigate the dimly lit corridors.")
+    print("You're keenly aware of the eerie silence, broken only by the occasional unsettling noise.")
+
+    print("As you inch your way back, a sudden gust of wind extinguishes your only source of light, plunging you into darkness.")
+    print("Panic sets in as you realize you've lost your sense of direction, and the mansion seems to have come alive around you.")
+
+    print("In your disoriented state, you stumble and fall into a hidden pit trap, your screams echoing through the mansion's halls as darkness consumes you.")
+
+    print("You've met a tragic end, another victim claimed by the haunted mansion's sinister secrets.")
+#This is a death make the game end
 
 def ask_for_a_trade():
     print("You decide to take a risk and propose a trade to the ghostly figure,")
     print("offering something of value in exchange for information on how to escape the mansion.")
     print("You offer to exchange your soul for the information.")
     time.sleep(2)
-    print(#This will somehow lead to the end)
+    print("The ghostly figure considers your offer, its ethereal form wavering slightly.")
+    print("After what feels like an eternity, it finally speaks, its voice echoing in the darkness.")
+    print("Your soul is a tempting offer, it says, but I seek something more tangible.")
+    print("You rack your brain for something else to offer, realizing that your soul might not be enough.")
+    print("You could:")
+    print("1. Offer a cherished possession instead.")
+    print("2. Offer to perform a task for the ghostly figure.")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        print("You offer a cherished possession instead.")
+        # Add continuation of the story or ending
+    elif choice == "2":
+        perform_task()
+def perform_task():
+    print("The ghostly figure nods.")
+    print("Deep within these walls lies an ancient locket, a token of my past life.")
+    print("Retrieve it, and I shall grant you the knowledge to escape.")
+    print("You could:")
+    print("1. Accept the task and begin your search.")
+    print("2. Refuse and seek another way out.")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        accept_the_task()
+    elif choice == "2":
+        refuse_and_seek()
+def refuse_and_seek():
+    print("You refuse the task, determined to find another way out.")
+    print("But as you stand alone in the darkness,")
+    print("you realize the enormity of your decision.")
+    print("Without the ghost's guidance, you're lost.")
+    print("Trapped forever within these haunted walls.")
+    print("GAME OVER")
 
-def make_a_run_for_it():
-    print("Feeling overwhelmed, you dash through the corridors,")
-    print("the echoes of your footsteps mingling with distant wails.")
-    print("As you burst through the front door, relief washes over you.")
-    print("You run until you're far away, vowing never to return.")
+def accept_the_task():
+    print("You accept the task, determined to find the ancient locket and earn your freedom.")
+    print("With a nod of determination, you set off into the depths of the mansion.")
+    print("After what feels like hours of searching, you finally discover the ancient locket, hidden away in a forgotten chamber.")
+    print("With the locket in hand, you return to the ghostly figure.")
+    print("As you offer the locket, the figure's form begins to shimmer,")
+    print("and with a soft glow, it imparts the knowledge you seek.")
+    print("With gratitude, the ghostly figure gestures towards the exit.")
+    print("You step out of the mansion, finally free from its haunting confines.")
+    print("Congratulations! You have successfully escaped the haunted mansion.")
 
-
-
-def retreat_back_to_foyer():
-    print("As you turn to retreat back to the foyer, you feel a sudden chill run down your spine.")
-    print("Before you can take another step, the doors to the mansion slam shut with a deafening bang, trapping you inside.")
-    print("You realize too late that the mansion's dark secrets have claimed another victim, and your fate is sealed.")
-    time.sleep(3)
-    print("The dark has won. Game over")
-
-
-def head_upstairs():
-    print("You cautiously climb the stairs, each step creaking under your weight.")
-    print("At the top of the stairs, you find yourself in a dimly lit hallway.")
-    print("Several doors line the hallway, each leading to a different room.")
-    print("What will you do?")
-    time.sleep(2)
-    print("1. Open the nearest door and enter.")
-    print("2. Listen at each door for any sounds.")
-    print("3. Head back downstairs.")
-
-
-
-def check_basement():
-    print("You descend the creaky staircase into the dark and musty basement.")
-    print("The air is thick with the smell of decay.")
-    print("As you explore, you come across an old chest tucked away in a corner.")
-    print("What will you do?")
-    time.sleep(2)
-    print("1. Open the chest and see what's inside.")
-    print("2. Shine your flashlight around for any clues.")
-    print("3. Leave the basement and return to the foyer.")
-
-
-
-
-def look_for_another_way():
-    print("You decide to search for another entrance to the mansion.")
-    print("You notice a broken window on the side of the building, offering a potential entry point.")
-    print("What will you do next?")
-    time.sleep(2)
-    print("1. Climb through the broken window.")
-    print("2. Look for a cellar door.")
-    print("3. Explore the area around the mansion for other options.")
+introduction()
 
 
-
-
-def climb_through_broken_window():
-    print("As you attempt to climb through the broken window, it suddenly gives way, causing you to crash onto the floor.")
-    print("You find yourself in a dusty room filled with broken furniture and debris.")
-    print("What will you do next?")
-    time.sleep(2)
-    print("1. Get up and continue exploring the room.")
-    print("2. Search for a way to turn on the lights.")
-    print("3. Try to find an exit.")
-
-
-
-
-def look_for_cellar_door():
-    print("You search the perimeter of the mansion for a cellar door.")
-    print("After a few minutes, you spot a small hatch hidden beneath some overgrown bushes.")
-    print("What will you do next?")
-    time.sleep(2)
-    print("1. Open the cellar door and descend into the darkness.")
-    print("2. Look for a way to illuminate the cellar.")
-    print("3. Explore other areas before entering the cellar.")
-
-
-
-
-def explore_area_around_mansion():
-    print("You decide to explore the area surrounding the mansion for alternative entrances or clues.")
-    print("As you venture further, you come across an old shed and a neglected garden.")
-    print("What will you do next?")
-    time.sleep(2)
-    print("1. Investigate the shed for any useful tools or items.")
-    print("2. Search the garden for any hidden passages or clues.")
-    print("3. Return to the front of the mansion.")
-
-
-
-def turn_back_and_leave():
-    print("You decide that the mansion is too eerie for your liking and turn to leave.")
-    print("As you walk away, you hear faint whispers and laughter echoing from within.")
-    print("Are you sure you want to leave?")
-    time.sleep(2)
-    print("1. Yes, get out of here as fast as possible.")
-    print("2. No, I must uncover the secrets of the mansion.")
-    print("3. Wait and observe for a moment longer.")
