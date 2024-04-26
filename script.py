@@ -756,7 +756,7 @@ def pull_lever():
     print("2. Opt to explore elsewhere before venturing into the unknown.")
     choice = input("Enter your choice: ")
     if choice == "1":
-        enter_secret_passage()
+        enter_secret_passage() #This will loop o one of the other original options
     elif choice == "2":
         continue_exploring()
 
